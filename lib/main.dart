@@ -17,6 +17,8 @@ void main() {
   user1.email = "ismail@gmail.com";
   print(user1.name);
   print(user1.email);
+
+  user1.login();
 }
 
 
@@ -26,5 +28,9 @@ void main() {
 class User {
   String name = "";
   String email = "";
+
+  void login() {
+    print("$name loggded in");
+  }
 }
 
