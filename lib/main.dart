@@ -13,9 +13,8 @@ void main() {
   /// OBJECTS
 
   /// Student Class Object
-  Student student1 = Student();
-  student1.name = "Ismail";
-  student1.email = "ismail@gmail.com";
+  Student student1 = Student("ismail", "ismail@gmail.com");
+
   print(student1.name);
   print(student1.email);
   student1.login();
@@ -44,8 +43,12 @@ void main() {
 /// CLASSES
 
 class Student {
-  String name = "";
-  String email = "";
+  String name;
+  String email;
+
+  Student({required this.name, required this.email}){
+
+  }
 
   void login() {
     print("$name loggded in");
