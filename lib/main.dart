@@ -20,14 +20,17 @@ void main() {
   student1.login();
 
 
-
   User user1 = User();
   user1.name = "ismail";
-
   user1.age = 24;
-
-
   user1.introduce();
+
+
+  Car car1 = Car();
+
+  car1.brand = "Toyota Corolla";
+
+  car1.start();
 
 }
 
@@ -55,3 +58,14 @@ class User {
   }
 }
 
+class Car {
+  String brand = "";
+  String model = "";
+  int? year;
+
+
+  void start(){
+    print("$brand is starting...");
+  }
+
+}
