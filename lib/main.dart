@@ -11,26 +11,47 @@ void main() {
 
 
   /// Objects
+  Student student1 = Student();
+
+  student1.name = "Ismail";
+  student1.email = "ismail@gmail.com";
+  print(student1.name);
+  print(student1.email);
+  student1.login();
+
+
+
   User user1 = User();
+  user1.name = "ismail";
 
-  user1.name = "Ismail";
-  user1.email = "ismail@gmail.com";
-  print(user1.name);
-  print(user1.email);
+  user1.age = 24;
 
-  user1.login();
+
+  user1.introduce();
+
 }
 
 
 /// Classes and Objects
 
 
-class User {
+class Student {
   String name = "";
   String email = "";
 
   void login() {
     print("$name loggded in");
+  }
+}
+
+
+class User {
+  String name = "";
+  String email = "";
+  int? age;
+
+  void introduce() {
+    print("Hi my name is $name and i am $age years of old");
   }
 }
 
