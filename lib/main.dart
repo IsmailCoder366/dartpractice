@@ -10,33 +10,38 @@ void main() {
   print(a==b);
 
 
-  /// Objects
-  Student student1 = Student();
+  /// OBJECTS
 
+  /// Student Class Object
+  Student student1 = Student();
   student1.name = "Ismail";
   student1.email = "ismail@gmail.com";
   print(student1.name);
   print(student1.email);
   student1.login();
 
-
+  /// User Class Object
   User user1 = User();
   user1.name = "ismail";
   user1.age = 24;
   user1.introduce();
 
-
+  /// Car Class Object
   Car car1 = Car();
-
   car1.brand = "Toyota Corolla";
-
   car1.start();
 
+  /// Bank Account Object
+  BankAccount bankAccount = BankAccount();
+
+  bankAccount.accountHolder = "ismail";
+
+  bankAccount.deposite();
+  bankAccount.withdraw();
 }
 
 
-/// Classes and Objects
-
+/// CLASSES
 
 class Student {
   String name = "";
@@ -46,7 +51,6 @@ class Student {
     print("$name loggded in");
   }
 }
-
 
 class User {
   String name = "";
@@ -68,4 +72,17 @@ class Car {
     print("$brand is starting...");
   }
 
+}
+
+class BankAccount {
+  String accountHolder = "";
+  int balance = 500;
+
+  void deposite() {
+    print("$accountHolder deposited $balance rupess");
+  }
+
+  void withdraw() {
+    print("$accountHolder withdraw $balance rupess");
+  }
 }
