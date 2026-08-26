@@ -2,76 +2,51 @@
 import 'encapsulation.dart';
 
 void main() {
-  ///  NULL SAFETY
-  String? name;
-  print(name); // null
+  BankAccount account = BankAccount("Ismail", 10000);
 
-  /// EQUALITY OPERATORS
-  var a = 10;
-  var b = 10;
-  print(a==b);
-
-
-  /// OBJECTS
-
-  /// Student Class Object
-  Student student1 = Student();
-  student1.name = "Ismail";
-  student1.email = "ismail@gmail.com";
-  print(student1.name);
-  print(student1.email);
-  student1.login();
-
-  /// User Class Object
-  User user1 = User();
-  user1.name = "ismail";
-  user1.age = 24;
-  user1.introduce();
-
-  /// Car Class Object
-  Car car1 = Car();
-  car1.brand = "Toyota Corolla";
-  car1.start();
-
-
-
-  BankAccount account = BankAccount("Ismail", 1000);
-
-  account.balance = -2000;
   print(account.balance);
 
+  account.deposit(5000);
+
+  print(account.balance);
+
+  account.withdraw(3000);
+
+  print(account.balance);
+
+  account.withdraw(20000);
+
+  print(account.balance);
 }
 
+class BankAccount {
+  String accountHolder;
+  double _balance;
 
-/// CLASSES
+  BankAccount(this.accountHolder, this._balance);
 
-class Student {
-  String name = "";
-  String email = "";
+  double get balance => _balance;
 
-  void login() {
-    print("$name loggded in");
-  }
-}
+  void deposit(double amount) {
+    if (amount <= 0) {
+      print("Invalid amount");
+      return;
+    }
 
-class User {
-  String name = "";
-  String email = "";
-  int? age;
-
-  void introduce() {
-    print("Hi my name is $name and i am $age years of old");
-  }
-}
-
-class Car {
-  String brand = "";
-  String model = "";
-  int? year;
-
-
-  void start(){
-    print("$brand is starting...");
+    _balance += amount;
   }
 
+  void withdraw(double amount) {
+    if (amount <= 0) {
+      print("Invalid amount");
+      return;
+    }
+
+    if (amount > _balance) {
+      print("Insufficient balance");
+      return;
+    }
+
+    _balance -= amount;
+  }
 }
