@@ -17,6 +17,8 @@ void main() {
   account.withdraw(20000);
 
   print(account.balance);
+
+  print("encapsulation added");
 }
 
 class BankAccount {
