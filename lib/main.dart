@@ -45,6 +45,7 @@ class BankAccount {
   void withdraw(double amount) {
     if (amount <= 0) {
       print("Invalid amount");
+      print("add valid payment");
       return;
     }
 
