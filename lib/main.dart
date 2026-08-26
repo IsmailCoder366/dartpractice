@@ -1,4 +1,6 @@
 
+import 'encapsulation.dart';
+
 void main() {
   ///  NULL SAFETY
   String? name;
@@ -31,13 +33,13 @@ void main() {
   car1.brand = "Toyota Corolla";
   car1.start();
 
-  /// Bank Account Object
-  BankAccount bankAccount = BankAccount();
 
-  bankAccount.accountHolder = "ismail";
 
-  bankAccount.deposite();
-  bankAccount.withdraw();
+  BankAccount account = BankAccount("Ismail", 1000);
+
+  account.balance = -2000;
+  print(account.balance);
+
 }
 
 
@@ -72,17 +74,4 @@ class Car {
     print("$brand is starting...");
   }
 
-}
-
-class BankAccount {
-  String accountHolder = "";
-  int balance = 500;
-
-  void deposite() {
-    print("$accountHolder deposited $balance rupess");
-  }
-
-  void withdraw() {
-    print("$accountHolder withdraw $balance rupess");
-  }
 }
