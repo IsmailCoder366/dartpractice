@@ -19,6 +19,8 @@ void main() {
   print(account.balance);
 
   print("encapsulation added");
+
+  print(account.balance);
 }
 
 class BankAccount {
