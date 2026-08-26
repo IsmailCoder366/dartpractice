@@ -2,7 +2,7 @@
 import 'encapsulation.dart';
 
 void main() {
-  BankAccount account = BankAccount("Ismail", 10000);
+  BankAccount account = BankAccount("bilal", 10000);
 
   print(account.balance);
 
