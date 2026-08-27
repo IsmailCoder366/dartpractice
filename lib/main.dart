@@ -9,7 +9,9 @@ void main() {
   account.balance -= 1000;
   print(account.balance);
 
-
+  Student student = Student('Muhammad', "Ismail");
+  print(student._firstName);
+  print(student._lastName);
 }
 
 
@@ -26,4 +28,13 @@ class BankAccount {
       _balance = amount;
     }
   }
+}
+
+class Student {
+  String _firstName;
+  String _lastName;
+
+  Student( this._firstName,  this._lastName);
+
+
 }
