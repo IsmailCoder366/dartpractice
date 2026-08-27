@@ -4,6 +4,7 @@ import 'encapsulation.dart';
 void main() {
   BankAccount account = BankAccount(10000);
   print(account.balance);
+  account.balance = 5000;
 
 
 }
