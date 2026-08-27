@@ -1,10 +1,14 @@
-/// Without Encapsulation
-///
+void main () {
+  Student student = Student("Muhammad", "Ismail");
 
+  print(student.fullName);
+}
 
-class BankAccount {
-  String accountHolder;
-  double balance;
+class Student {
+  String firstName;
+  String lastName;
 
-  BankAccount( this.accountHolder, this.balance);
+  Student(this.firstName, this.lastName);
+
+  String get fullName => "$firstName $lastName";
 }
