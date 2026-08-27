@@ -10,8 +10,7 @@ void main() {
   print(account.balance);
 
   Student student = Student('Muhammad', "Ismail");
-  print(student._firstName);
-  print(student._lastName);
+  print(student.fullName);
 }
 
 
@@ -35,6 +34,6 @@ class Student {
   String _lastName;
 
   Student( this._firstName,  this._lastName);
-
+  String get fullName => "$_firstName $_lastName";
 
 }
