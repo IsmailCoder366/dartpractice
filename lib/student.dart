@@ -8,5 +8,7 @@ class Student {
 }
 
 void main() {
+  Student student = Student('ismail', 'khan');
 
+  print(student._fullName);
 }
