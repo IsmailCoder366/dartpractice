@@ -1,14 +1,16 @@
 class Temperature {
-    double _celsius;
+  double _celcius;
 
 
-    Temperature(this._celsius);
+  Temperature(this._celcius);
 
-    double get fahrenheit => (_celsius * 9 / 5) + 32;
-
+  double get fahrenheit => (_celcius * 9/5) + 32;
 }
-void main() {
-  Temperature temp = Temperature(25);
-  print(temp.fahrenheit);
 
+void main() {
+  Temperature temp = Temperature(40);
+
+
+
+  print(temp.fahrenheit);
 }
