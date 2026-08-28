@@ -9,8 +9,5 @@ class Temperature {
 
 void main() {
   Temperature temp = Temperature(40);
-
-
-
   print(temp.fahrenheit);
 }
